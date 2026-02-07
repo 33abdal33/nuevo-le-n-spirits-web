@@ -1,0 +1,167 @@
+import whiskeyImg from "@/assets/whiskey.jpg";
+import rumImg from "@/assets/rum.jpg";
+import wineImg from "@/assets/wine.jpg";
+import beerImg from "@/assets/beer.jpg";
+import tequilaImg from "@/assets/tequila.jpg";
+import vodkaImg from "@/assets/vodka.jpg";
+
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  category: string;
+  description: string;
+  isPromo?: boolean;
+}
+
+export const categories = [
+  "Todos",
+  "Whiskies",
+  "Rones",
+  "Vinos",
+  "Cervezas",
+  "Tequilas",
+  "Vodkas",
+] as const;
+
+export type Category = (typeof categories)[number];
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Johnnie Walker Black Label",
+    price: 899,
+    image: whiskeyImg,
+    category: "Whiskies",
+    description: "Whisky escocés premium 750ml, 12 años de maduración",
+  },
+  {
+    id: 2,
+    name: "Buchanan's 12 Años",
+    price: 749,
+    image: whiskeyImg,
+    category: "Whiskies",
+    description: "Whisky escocés de lujo 750ml, suave y equilibrado",
+  },
+  {
+    id: 3,
+    name: "Ron Diplomático Reserva",
+    price: 689,
+    image: rumImg,
+    category: "Rones",
+    description: "Ron venezolano premium 750ml, notas de caramelo y vainilla",
+  },
+  {
+    id: 4,
+    name: "Bacardí Añejo Cuatro",
+    price: 399,
+    image: rumImg,
+    category: "Rones",
+    description: "Ron dorado 750ml, 4 años de añejamiento en barrica",
+  },
+  {
+    id: 5,
+    name: "Casillero del Diablo Reserva",
+    price: 259,
+    image: wineImg,
+    category: "Vinos",
+    description: "Vino tinto Cabernet Sauvignon 750ml, Chile",
+  },
+  {
+    id: 6,
+    name: "Malbec Catena Zapata",
+    price: 549,
+    image: wineImg,
+    category: "Vinos",
+    description: "Vino tinto argentino premium 750ml, Mendoza",
+  },
+  {
+    id: 7,
+    name: "Heineken Premium Pack",
+    price: 189,
+    originalPrice: 229,
+    image: beerImg,
+    category: "Cervezas",
+    description: "Pack de 12 cervezas premium 355ml",
+    isPromo: true,
+  },
+  {
+    id: 8,
+    name: "Corona Extra 24 Pack",
+    price: 349,
+    originalPrice: 399,
+    image: beerImg,
+    category: "Cervezas",
+    description: "Caja de 24 cervezas 355ml, la más refrescante",
+    isPromo: true,
+  },
+  {
+    id: 9,
+    name: "Don Julio Reposado",
+    price: 799,
+    image: tequilaImg,
+    category: "Tequilas",
+    description: "Tequila 100% agave 750ml, reposado en barricas de roble",
+  },
+  {
+    id: 10,
+    name: "Patrón Silver",
+    price: 949,
+    image: tequilaImg,
+    category: "Tequilas",
+    description: "Tequila ultra premium 750ml, cristalino y suave",
+  },
+  {
+    id: 11,
+    name: "Grey Goose Original",
+    price: 699,
+    image: vodkaImg,
+    category: "Vodkas",
+    description: "Vodka francés premium 750ml, destilado 5 veces",
+  },
+  {
+    id: 12,
+    name: "Absolut Elyx",
+    price: 599,
+    image: vodkaImg,
+    category: "Vodkas",
+    description: "Vodka sueco de lujo 750ml, destilación artesanal",
+  },
+];
+
+export const promoProducts = products.filter((p) => p.isPromo);
+
+export const combos = [
+  {
+    id: 101,
+    name: "Combo Fiesta Premium",
+    price: 1499,
+    originalPrice: 1899,
+    description: "1 Whisky Black Label + 1 Ron Diplomático + 12 Heineken",
+    image: whiskeyImg,
+    category: "Combos",
+    isPromo: true,
+  },
+  {
+    id: 102,
+    name: "Combo Celebración",
+    price: 999,
+    originalPrice: 1299,
+    description: "1 Tequila Don Julio + 1 Vino Catena + 6 Cervezas",
+    image: tequilaImg,
+    category: "Combos",
+    isPromo: true,
+  },
+  {
+    id: 103,
+    name: "Combo Noche de Amigos",
+    price: 599,
+    originalPrice: 749,
+    description: "24 Pack Corona + 12 Heineken + Botana premium",
+    image: beerImg,
+    category: "Combos",
+    isPromo: true,
+  },
+];
