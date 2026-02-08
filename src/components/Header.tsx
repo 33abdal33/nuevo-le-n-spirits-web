@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,6 +14,14 @@ const navLinks = [
 const Header = () => {
   const { totalItems, setIsCartOpen } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-dark">
@@ -33,6 +41,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors tracking-wide uppercase"
             >
               {link.label}
@@ -83,7 +92,10 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => {
+                    handleNavClick(e, link.href);
+                    setMenuOpen(false);
+                  }}
                   className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors tracking-wide uppercase"
                 >
                   {link.label}
