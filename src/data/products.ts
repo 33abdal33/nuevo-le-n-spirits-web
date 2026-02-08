@@ -8,8 +8,13 @@ import jackDanielsImg from "@/assets/jack-daniels.png";
 import jwRedImg from "@/assets/jw-red-label.jpg";
 import rumImg from "@/assets/rum.jpg";
 import wineImg from "@/assets/wine.jpg";
-import beerImg from "@/assets/beer.jpg";
 import tequilaImg from "@/assets/tequila.jpg";
+import cusquenaTrigo6packImg from "@/assets/cusquena-trigo-6pack.webp";
+import cusquenaTrigoCaja12Img from "@/assets/cusquena-trigo-caja12.jpg";
+import pilsen6pack355Img from "@/assets/pilsen-6pack-355.jpg";
+import pilsen6pack473Img from "@/assets/pilsen-6pack-473.webp";
+import pilsenCaja12Img from "@/assets/pilsen-caja12.jpg";
+import pilsen330Img from "@/assets/pilsen-330.jpg";
 import smirnoffClasicoImg from "@/assets/smirnoff-clasico.webp";
 import absolutVodkaImg from "@/assets/absolut-vodka.webp";
 import skyyVodkaImg from "@/assets/skyy-vodka.webp";
@@ -140,23 +145,57 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Heineken Premium Pack",
-    price: 189,
-    originalPrice: 229,
-    image: beerImg,
+    name: "Cusqueña Trigo Six Pack Lata 473ml",
+    price: 42,
+    originalPrice: 49,
+    image: cusquenaTrigo6packImg,
     category: "Cervezas",
-    description: "Pack de 12 cervezas premium 355ml",
+    description: "Six pack de cerveza de trigo 100% malta, latas de 473ml",
     isPromo: true,
   },
   {
     id: 8,
-    name: "Corona Extra 24 Pack",
-    price: 349,
-    originalPrice: 399,
-    image: beerImg,
+    name: "Cusqueña Trigo Caja x12",
+    price: 69,
+    originalPrice: 82,
+    image: cusquenaTrigoCaja12Img,
     category: "Cervezas",
-    description: "Caja de 24 cervezas 355ml, la más refrescante",
+    description: "Caja de 12 botellas de cerveza de trigo premium 620ml",
     isPromo: true,
+  },
+  {
+    id: 24,
+    name: "Pilsen Callao Six Pack 355ml",
+    price: 28,
+    image: pilsen6pack355Img,
+    category: "Cervezas",
+    description: "Six pack de latas 355ml, reuniendo amigos desde 1863",
+  },
+  {
+    id: 25,
+    name: "Pilsen Callao Six Pack 473ml",
+    price: 36,
+    image: pilsen6pack473Img,
+    category: "Cervezas",
+    description: "Six pack de latas grandes 473ml, la cerveza del Perú",
+  },
+  {
+    id: 26,
+    name: "Pilsen Callao Caja x12",
+    price: 55,
+    originalPrice: 65,
+    image: pilsenCaja12Img,
+    category: "Cervezas",
+    description: "Caja de 12 botellas 620ml, ideal para reuniones",
+    isPromo: true,
+  },
+  {
+    id: 27,
+    name: "Pilsen Callao Botella 330ml",
+    price: 5,
+    image: pilsen330Img,
+    category: "Cervezas",
+    description: "Botella individual 330ml, cerveza lager clásica peruana",
   },
   {
     id: 9,
@@ -258,10 +297,10 @@ export const combos = [
   {
     id: 103,
     name: "Combo Noche de Amigos",
-    price: 599,
-    originalPrice: 749,
-    description: "24 Pack Corona + 12 Heineken + Botana premium",
-    image: beerImg,
+    price: 99,
+    originalPrice: 130,
+    description: "Caja Pilsen x12 + Six Pack Cusqueña Trigo + Piqueo",
+    image: pilsenCaja12Img,
     category: "Combos",
     isPromo: true,
   },
