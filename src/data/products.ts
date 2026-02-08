@@ -10,7 +10,13 @@ import rumImg from "@/assets/rum.jpg";
 import wineImg from "@/assets/wine.jpg";
 import beerImg from "@/assets/beer.jpg";
 import tequilaImg from "@/assets/tequila.jpg";
-import vodkaImg from "@/assets/vodka.jpg";
+import smirnoffClasicoImg from "@/assets/smirnoff-clasico.webp";
+import absolutVodkaImg from "@/assets/absolut-vodka.webp";
+import skyyVodkaImg from "@/assets/skyy-vodka.webp";
+import smirnoffIceGreenAppleImg from "@/assets/smirnoff-ice-green-apple.webp";
+import smirnoffAppleImg from "@/assets/smirnoff-apple.webp";
+import russkayaVodkaImg from "@/assets/russkaya-vodka.webp";
+import russkayaPinkImg from "@/assets/russkaya-pink.webp";
 
 export interface Product {
   id: number;
@@ -170,19 +176,59 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: "Grey Goose Original",
-    price: 699,
-    image: vodkaImg,
+    name: "Smirnoff Nº21 Clásico",
+    price: 349,
+    image: smirnoffClasicoImg,
     category: "Vodkas",
-    description: "Vodka francés premium 750ml, destilado 5 veces",
+    description: "Vodka clásico 750ml, triple destilación, filtrado 10 veces",
   },
   {
     id: 12,
-    name: "Absolut Elyx",
-    price: 599,
-    image: vodkaImg,
+    name: "Absolut Vodka",
+    price: 549,
+    image: absolutVodkaImg,
     category: "Vodkas",
-    description: "Vodka sueco de lujo 750ml, destilación artesanal",
+    description: "Vodka sueco premium 700ml, destilación continua desde 1879",
+  },
+  {
+    id: 19,
+    name: "Skyy Vodka",
+    price: 399,
+    image: skyyVodkaImg,
+    category: "Vodkas",
+    description: "Vodka americano 750ml, cuádruple destilación y triple filtración",
+  },
+  {
+    id: 20,
+    name: "Smirnoff Ice Green Apple",
+    price: 89,
+    image: smirnoffIceGreenAppleImg,
+    category: "Vodkas",
+    description: "Bebida con vodka sabor manzana verde 355ml, refrescante y ligera",
+  },
+  {
+    id: 21,
+    name: "Smirnoff Green Apple",
+    price: 349,
+    image: smirnoffAppleImg,
+    category: "Vodkas",
+    description: "Vodka saborizado manzana verde 700ml, infusión natural de sabores",
+  },
+  {
+    id: 22,
+    name: "Russkaya Vodka",
+    price: 249,
+    image: russkayaVodkaImg,
+    category: "Vodkas",
+    description: "Vodka triple destilado 750ml, suave y cristalino",
+  },
+  {
+    id: 23,
+    name: "Russkaya Pink Strawberry",
+    price: 279,
+    image: russkayaPinkImg,
+    category: "Vodkas",
+    description: "Vodka saborizado fresa 750ml, sabor dulce y refrescante",
   },
 ];
 
