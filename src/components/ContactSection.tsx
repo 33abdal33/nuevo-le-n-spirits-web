@@ -20,7 +20,7 @@ const contactInfo = [
 ];
 
 const ContactSection = () => {
-  const whatsappNumber = "5281123456789";
+  const whatsappNumber = "51944088559";
   const whatsappMessage = encodeURIComponent("¡Hola! Me interesa hacer un pedido en Licorería Nuevo León.");
 
   return (

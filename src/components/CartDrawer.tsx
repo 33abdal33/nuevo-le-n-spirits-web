@@ -120,7 +120,7 @@ const CartDrawer = () => {
                 <button
                   className="w-full bg-gradient-gold text-primary-foreground py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold"
                   onClick={() => {
-                    const whatsappNumber = "5281123456789";
+                    const whatsappNumber = "51944088559";
                     const orderText = items
                       .map((i) => `• ${i.name} x${i.quantity} - $${i.price * i.quantity}`)
                       .join("\n");
