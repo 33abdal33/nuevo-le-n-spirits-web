@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppFloatingButton />
     </div>
   );
 };
