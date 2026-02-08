@@ -1,4 +1,11 @@
-import whiskeyImg from "@/assets/whiskey.jpg";
+import chivasImg from "@/assets/chivas-regal.jpg";
+import ballantinesImg from "@/assets/ballantines.jpg";
+import somethingSpecialImg from "@/assets/something-special.jpg";
+import oldTimesRedImg from "@/assets/old-times-red.webp";
+import oldTimesBlackImg from "@/assets/old-times-black.webp";
+import jwBlackImg from "@/assets/jw-black-label.jpg";
+import jackDanielsImg from "@/assets/jack-daniels.png";
+import jwRedImg from "@/assets/jw-red-label.jpg";
 import rumImg from "@/assets/rum.jpg";
 import wineImg from "@/assets/wine.jpg";
 import beerImg from "@/assets/beer.jpg";
@@ -33,17 +40,65 @@ export const products: Product[] = [
     id: 1,
     name: "Johnnie Walker Black Label",
     price: 899,
-    image: whiskeyImg,
+    image: jwBlackImg,
     category: "Whiskies",
     description: "Whisky escocés premium 750ml, 12 años de maduración",
   },
   {
     id: 2,
-    name: "Buchanan's 12 Años",
-    price: 749,
-    image: whiskeyImg,
+    name: "Johnnie Walker Red Label",
+    price: 549,
+    image: jwRedImg,
     category: "Whiskies",
-    description: "Whisky escocés de lujo 750ml, suave y equilibrado",
+    description: "Whisky escocés 750ml, ideal para cócteles",
+  },
+  {
+    id: 13,
+    name: "Chivas Regal 12 Años",
+    price: 799,
+    image: chivasImg,
+    category: "Whiskies",
+    description: "Blended Scotch Whisky 750ml, suave y refinado",
+  },
+  {
+    id: 14,
+    name: "Ballantine's Finest",
+    price: 499,
+    image: ballantinesImg,
+    category: "Whiskies",
+    description: "Blended Scotch Whisky 750ml, equilibrado y versátil",
+  },
+  {
+    id: 15,
+    name: "Something Special",
+    price: 449,
+    image: somethingSpecialImg,
+    category: "Whiskies",
+    description: "Blended Scotch Whisky 750ml, madurado a la perfección",
+  },
+  {
+    id: 16,
+    name: "Old Times Red",
+    price: 299,
+    image: oldTimesRedImg,
+    category: "Whiskies",
+    description: "Blended Whisky 750ml, selección especial Nº1",
+  },
+  {
+    id: 17,
+    name: "Old Times Black",
+    price: 349,
+    image: oldTimesBlackImg,
+    category: "Whiskies",
+    description: "Blended Whisky 750ml, selección rara Nº2",
+  },
+  {
+    id: 18,
+    name: "Jack Daniel's Old No.7",
+    price: 749,
+    image: jackDanielsImg,
+    category: "Whiskies",
+    description: "Tennessee Whiskey 750ml, filtrado en carbón de arce",
   },
   {
     id: 3,
@@ -140,7 +195,7 @@ export const combos = [
     price: 1499,
     originalPrice: 1899,
     description: "1 Whisky Black Label + 1 Ron Diplomático + 12 Heineken",
-    image: whiskeyImg,
+    image: jwBlackImg,
     category: "Combos",
     isPromo: true,
   },
