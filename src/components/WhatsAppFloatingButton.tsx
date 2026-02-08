@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = ""; // TODO: set real number
+const WHATSAPP_NUMBER = "51944088559";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hola, no encuentro un producto en su catálogo. ¿Podrían ayudarme?");
 
 const WhatsAppFloatingButton = () => {
