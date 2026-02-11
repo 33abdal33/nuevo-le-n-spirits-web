@@ -7,7 +7,12 @@ import jwBlackImg from "@/assets/jw-black-label.jpg";
 import jackDanielsImg from "@/assets/jack-daniels.png";
 import jwRedImg from "@/assets/jw-red-label.jpg";
 import rumImg from "@/assets/rum.jpg";
-import wineImg from "@/assets/wine.jpg";
+import casilleroImg from "@/assets/casillero-del-diablo.webp";
+import tacamaRoseImg from "@/assets/tacama-rose.jpg";
+import queiroloRoseImg from "@/assets/queirolo-rose.jpg";
+import queiroloBorgonaImg from "@/assets/queirolo-borgona.webp";
+import taberneroBorgonaImg from "@/assets/tabernero-borgona.jpg";
+import taberneroRoseImg from "@/assets/tabernero-rose.webp";
 import tequilaImg from "@/assets/tequila.jpg";
 import cusquenaTrigo6packImg from "@/assets/cusquena-trigo-6pack.webp";
 import cusquenaTrigoCaja12Img from "@/assets/cusquena-trigo-caja12.jpg";
@@ -130,18 +135,50 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Casillero del Diablo Reserva",
-    price: 259,
-    image: wineImg,
+    price: 35,
+    image: casilleroImg,
     category: "Vinos",
-    description: "Vino tinto Cabernet Sauvignon 750ml, Chile",
+    description: "Vino tinto Cabernet Sauvignon 750ml, Concha y Toro, Chile",
   },
   {
     id: 6,
-    name: "Malbec Catena Zapata",
-    price: 549,
-    image: wineImg,
+    name: "Tacama Rosé Semi Seco",
+    price: 25,
+    image: tacamaRoseImg,
     category: "Vinos",
-    description: "Vino tinto argentino premium 750ml, Mendoza",
+    description: "Vino rosé semi seco De la Viña 750ml, Ica, Perú",
+  },
+  {
+    id: 28,
+    name: "Santiago Queirolo Rosé",
+    price: 22,
+    image: queiroloRoseImg,
+    category: "Vinos",
+    description: "Vino Rosé Shiraz 750ml, 11.5% vol, tradición peruana",
+  },
+  {
+    id: 29,
+    name: "Santiago Queirolo Borgoña",
+    price: 20,
+    image: queiroloBorgonaImg,
+    category: "Vinos",
+    description: "Vino Borgoña Gran Vino 750ml, clásico peruano",
+  },
+  {
+    id: 30,
+    name: "Tabernero Borgoña",
+    price: 22,
+    image: taberneroBorgonaImg,
+    category: "Vinos",
+    description: "Vino Borgoña semi seco 750ml, 11% vol, Ica, Perú",
+  },
+  {
+    id: 31,
+    name: "Tabernero Gran Rosé",
+    price: 28,
+    image: taberneroRoseImg,
+    category: "Vinos",
+    description: "Vino Gran Rosé semi seco afrutado 750ml, Ica, Perú",
   },
   {
     id: 7,
