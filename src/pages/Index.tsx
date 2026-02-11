@@ -7,10 +7,12 @@ import ContactSection from "@/components/ContactSection";
 import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <LoadingScreen />
       <Header />
       <CartDrawer />
       <main>
