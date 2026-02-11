@@ -93,8 +93,14 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => {
-                    handleNavClick(e, link.href);
+                    e.preventDefault();
                     setMenuOpen(false);
+                    setTimeout(() => {
+                      const target = document.querySelector(link.href);
+                      if (target) {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }
+                    }, 300);
                   }}
                   className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors tracking-wide uppercase"
                 >
