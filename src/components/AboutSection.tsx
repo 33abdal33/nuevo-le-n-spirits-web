@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Award, Wine, Users, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Clock, value: "15+", label: "Años de experiencia" },
-  { icon: Wine, value: "500+", label: "Productos disponibles" },
+  { icon: Clock, value: "6+", label: "Años de experiencia" },
+  { icon: Wine, value: "100+", label: "Productos disponibles" },
   { icon: Users, value: "10k+", label: "Clientes satisfechos" },
   { icon: Award, value: "100%", label: "Calidad garantizada" },
 ];
@@ -28,13 +28,13 @@ const AboutSection = () => {
             <div className="space-y-4 text-foreground/70 leading-relaxed">
               <p>
                 <strong className="text-foreground">Licorería Nuevo León</strong> nació con la misión de ofrecer 
-                la mejor selección de licores premium a los conocedores más exigentes. Con más de 15 años de 
+                la mejor selección de licores premium a los conocedores más exigentes. Con más de 6 años de 
                 experiencia, nos hemos consolidado como referencia en calidad, variedad y servicio excepcional.
               </p>
               <p>
                 Trabajamos directamente con las mejores destilerías y bodegas del mundo para traerte 
                 productos auténticos a precios competitivos. Cada botella que ofrecemos ha sido 
-                cuidadosamente seleccionada por nuestro equipo de expertos.
+                cuidadosamente seleccionada por nuestro equipo.
               </p>
               <p>
                 Nuestro compromiso es brindarte una experiencia de compra inigualable, con asesoría 
