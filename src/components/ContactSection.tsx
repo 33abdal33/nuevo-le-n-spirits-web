@@ -5,7 +5,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Dirección",
-    details: ["San Jose Mz.E - Lt.9 #15011", "Lima, Nuevo León, Perú"],
+    details: ["San Jose Mz.E - Lt.9 #15011", "Lima, Perú"],
   },
   {
     icon: Phone,
