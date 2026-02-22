@@ -3,7 +3,7 @@ import ballantinesImg from "@/assets/ballantines.jpg";
 import somethingSpecialImg from "@/assets/something-special.jpg";
 import oldTimesRedImg from "@/assets/old-times-red.webp";
 import oldTimesBlackImg from "@/assets/old-times-black.webp";
-import jwBlackImg from "@/assets/jw-black-label.jpg";
+import jwBlackImg from "@/assets/BLACK.png";
 import jackDanielsImg from "@/assets/jack-daniels.png";
 import jwRedImg from "@/assets/jw-red-label.jpg";
 import rumImg from "@/assets/rum.jpg";
@@ -33,6 +33,9 @@ import cartavioBlackBarrelImg from "@/assets/RON CARTAVIO BLACK BARREL.png";
 import cartavioBlancoImg from "@/assets/Ron Cartavio BLANCO 720.png";
 import cartavioBlackImg from "@/assets/Ron Cartavio Black 720.png";
 import barceloAnejoImg from "@/assets/download (1).png"; // Te sugiero renombrar la imagen a barcelo-anejo.png en tu carpeta
+import ComboRussKaya from "@/assets/RusskayaCombo.png";
+import ComboRedLabel from "@/assets/ComboRedLabel.webp";
+import ComboRonCartavio from "@/assets/combo-pack-cartavio.png";
 
 export interface Product {
   id: number;
@@ -61,7 +64,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Johnnie Walker Black Label",
-    price: 899,
+    price: 120,
     image: jwBlackImg,
     category: "Whiskies",
     description: "Whisky escocés premium 750ml, 12 años de maduración",
@@ -69,7 +72,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Johnnie Walker Red Label",
-    price: 549,
+    price: 65,
     image: jwRedImg,
     category: "Whiskies",
     description: "Whisky escocés 750ml, ideal para cócteles",
@@ -77,7 +80,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: "Chivas Regal 12 Años",
-    price: 799,
+    price: 60,
     image: chivasImg,
     category: "Whiskies",
     description: "Blended Scotch Whisky 750ml, suave y refinado",
@@ -85,7 +88,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Ballantine's Finest",
-    price: 499,
+    price: 40,
     image: ballantinesImg,
     category: "Whiskies",
     description: "Blended Scotch Whisky 750ml, equilibrado y versátil",
@@ -93,7 +96,7 @@ export const products: Product[] = [
   {
     id: 15,
     name: "Something Special",
-    price: 449,
+    price: 50,
     image: somethingSpecialImg,
     category: "Whiskies",
     description: "Blended Scotch Whisky 750ml, madurado a la perfección",
@@ -101,7 +104,7 @@ export const products: Product[] = [
   {
     id: 16,
     name: "Old Times Red",
-    price: 299,
+    price: 24,
     image: oldTimesRedImg,
     category: "Whiskies",
     description: "Blended Whisky 750ml, selección especial Nº1",
@@ -109,15 +112,15 @@ export const products: Product[] = [
   {
     id: 17,
     name: "Old Times Black",
-    price: 349,
+    price: 28,
     image: oldTimesBlackImg,
     category: "Whiskies",
     description: "Blended Whisky 750ml, selección rara Nº2",
   },
   {
     id: 18,
-    name: "Jack Daniel's Old No.7",
-    price: 749,
+    name: "Jack Daniel's Old ",
+    price: 130,
     image: jackDanielsImg,
     category: "Whiskies",
     description: "Tennessee Whiskey 750ml, filtrado en carbón de arce",
@@ -125,7 +128,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Ron Cartavio Black Barrel",
-    price: 45,
+    price: 35,
     image: cartavioBlackBarrelImg,
     category: "Rones",
     description: "Ron peruano premium, añejado 3 años con notas intensas a madera y especias.",
@@ -335,31 +338,31 @@ export const promoProducts = products.filter((p) => p.isPromo);
 export const combos = [
   {
     id: 101,
-    name: "Combo Fiesta Premium",
-    price: 1499,
-    originalPrice: 1899,
-    description: "1 Whisky Black Label + 1 Ron Diplomático + 12 Heineken",
-    image: jwBlackImg,
+    name: "Combo RussKaya",
+    price: 35,
+    originalPrice: 45,
+    description: "1 RussKaya + Guarana de 2 Lt + 1 Hielo",
+    image: ComboRussKaya,
     category: "Combos",
     isPromo: true,
   },
   {
     id: 102,
-    name: "Combo Celebración",
-    price: 999,
-    originalPrice: 1299,
-    description: "1 Tequila Jose Cuervo + 1 Vino Catena + 6 Cervezas",
-    image: JoseCuervoAzul,
+    name: "Combo RedLabel",
+    price: 70,
+    originalPrice: 80,
+    description: "1 Red Label + Hielo + Guarana",
+    image: ComboRedLabel,
     category: "Combos",
     isPromo: true,
   },
   {
     id: 103,
-    name: "Combo Noche de Amigos",
-    price: 99,
-    originalPrice: 130,
-    description: "Caja Pilsen x12 + Six Pack Cusqueña Trigo + Piqueo",
-    image: pilsenCaja12Img,
+    name: "Combo RonCartavio",
+    price: 35,
+    originalPrice: 40,
+    description: "1 Ron de 720 + 1 Hielo + 1 CocaCola",
+    image: ComboRonCartavio,
     category: "Combos",
     isPromo: true,
   },

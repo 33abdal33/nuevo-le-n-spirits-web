@@ -49,10 +49,10 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
 
         <div className="flex items-center justify-between">
           <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-            <span className="text-base sm:text-xl font-bold text-primary">${product.price}</span>
+            <span className="text-base sm:text-xl font-bold text-primary">S/{product.price}</span>
             {product.originalPrice && (
               <span className="text-[10px] sm:text-sm text-muted-foreground line-through">
-                ${product.originalPrice}
+                S/{product.originalPrice}
               </span>
             )}
           </div>

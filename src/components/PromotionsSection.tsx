@@ -82,7 +82,7 @@ const PromotionsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
+<div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent" />
                 <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-sm uppercase">
                   -
                   {Math.round(
@@ -96,9 +96,9 @@ const PromotionsSection = () => {
                 <p className="text-sm text-muted-foreground mb-4">{combo.description}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-primary">${combo.price}</span>
+                    <span className="text-2xl font-bold text-primary">S/{combo.price}</span>
                     <span className="text-sm text-muted-foreground line-through">
-                      ${combo.originalPrice}
+                      S/{combo.originalPrice}
                     </span>
                   </div>
                   <button
