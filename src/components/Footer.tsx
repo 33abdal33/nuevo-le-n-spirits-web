@@ -31,7 +31,7 @@ const Footer = () => {
               Legal
             </h4>
             <p className="text-xs text-muted-foreground/60 leading-relaxed">
-              Venta exclusiva a mayores de 18 años. El consumo excesivo de alcohol es perjudicial para la salud. 
+              Venta exclusiva a mayores de 6 años. El consumo excesivo de alcohol es perjudicial para la salud. 
               Bebe con responsabilidad.
             </p>
           </div>
