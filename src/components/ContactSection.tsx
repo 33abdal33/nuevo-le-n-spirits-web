@@ -5,17 +5,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Dirección",
-    details: ["Av. Constitución #1520, Col. Centro", "Monterrey, Nuevo León, México"],
+    details: ["San Jose Mz.E - Lt.9 #15011", "Lima, Nuevo León, Perú"],
   },
   {
     icon: Phone,
     title: "Teléfono",
-    details: ["+52 (81) 1234-5678"],
+    details: ["+51 944088559","+51 957 811 357","+51 994 680 820"]
   },
   {
     icon: Clock,
     title: "Horario",
-    details: ["Lun - Sáb: 10:00 AM - 10:00 PM", "Dom: 11:00 AM - 8:00 PM"],
+    details: ["Lun - Vie: 10:00 AM - 12:00 AM", "Sab - Dom: 11:00 AM - 4:00 AM"],
   },
 ];
 
@@ -84,16 +84,18 @@ const ContactSection = () => {
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </a>
+               {/*
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-secondary text-foreground/80 px-5 py-3 rounded-sm font-medium hover:text-primary transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
                 Instagram
               </a>
-              <a
+              */} 
+               {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -102,6 +104,7 @@ const ContactSection = () => {
                 <Facebook className="w-5 h-5" />
                 Facebook
               </a>
+              */} 
             </motion.div>
           </div>
 
@@ -117,8 +120,8 @@ const ContactSection = () => {
                 <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">Visítanos</h3>
                 <p className="text-muted-foreground mb-6">
-                  Av. Constitución #1520, Col. Centro<br />
-                  Monterrey, Nuevo León
+                  San Jose Mz.E - Lt.9<br />
+                  Lima, Nuevo León
                 </p>
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
