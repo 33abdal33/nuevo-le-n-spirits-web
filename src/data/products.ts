@@ -165,7 +165,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Tacama Rosé Semi Seco",
-    price: 25,
+    price: 35,
     image: tacamaRoseImg,
     category: "Vinos",
     description: "Vino rosé semi seco De la Viña 750ml, Ica, Perú",
@@ -173,7 +173,7 @@ export const products: Product[] = [
   {
     id: 28,
     name: "Santiago Queirolo Rosé",
-    price: 22,
+    price: 25,
     image: queiroloRoseImg,
     category: "Vinos",
     description: "Vino Rosé Shiraz 750ml, 11.5% vol, tradición peruana",
@@ -181,7 +181,7 @@ export const products: Product[] = [
   {
     id: 29,
     name: "Santiago Queirolo Borgoña",
-    price: 20,
+    price: 25,
     image: queiroloBorgonaImg,
     category: "Vinos",
     description: "Vino Borgoña Gran Vino 750ml, clásico peruano",
@@ -189,7 +189,7 @@ export const products: Product[] = [
   {
     id: 30,
     name: "Tabernero Borgoña",
-    price: 22,
+    price: 25,
     image: taberneroBorgonaImg,
     category: "Vinos",
     description: "Vino Borgoña semi seco 750ml, 11% vol, Ica, Perú",
@@ -197,7 +197,7 @@ export const products: Product[] = [
   {
     id: 31,
     name: "Tabernero Gran Rosé",
-    price: 28,
+    price: 25,
     image: taberneroRoseImg,
     category: "Vinos",
     description: "Vino Gran Rosé semi seco afrutado 750ml, Ica, Perú",
@@ -205,8 +205,8 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Cusqueña Trigo Six Pack Lata 473ml",
-    price: 42,
-    originalPrice: 49,
+    price: 30,
+    originalPrice: 40,
     image: cusquenaTrigo6packImg,
     category: "Cervezas",
     description: "Six pack de cerveza de trigo 100% malta, latas de 473ml",
@@ -215,8 +215,8 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Cusqueña Trigo Caja x12",
-    price: 69,
-    originalPrice: 82,
+    price: 95,
+    originalPrice: 87,
     image: cusquenaTrigoCaja12Img,
     category: "Cervezas",
     description: "Caja de 12 botellas de cerveza de trigo premium 620ml",
@@ -225,7 +225,7 @@ export const products: Product[] = [
   {
     id: 24,
     name: "Pilsen Callao Six Pack 355ml",
-    price: 28,
+    price: 25,
     image: pilsen6pack355Img,
     category: "Cervezas",
     description: "Six pack de latas 355ml, reuniendo amigos desde 1863",
@@ -241,8 +241,8 @@ export const products: Product[] = [
   {
     id: 26,
     name: "Pilsen Callao Caja x12",
-    price: 55,
-    originalPrice: 65,
+    price: 70,
+    originalPrice: 77,
     image: pilsenCaja12Img,
     category: "Cervezas",
     description: "Caja de 12 botellas 620ml, ideal para reuniones",
@@ -259,7 +259,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Jose Cuervo Especial Silver",
-    price: 799,
+    price: 40,
     image: JoseCuervoAzul,
     category: "Tequilas",
     description: "Tequila blanco 750ml, sabor suave, fresco y con ligeras notas de agave.",
@@ -267,7 +267,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Jose Cuervo Especial Gold",
-    price: 949,
+    price: 40,
     image: JoseCuervoDorado,
     category: "Tequilas",
     description: "Tequila dorado 750ml, reposado con notas dulces de vainilla y roble",
@@ -275,7 +275,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Smirnoff Nº21 Clásico",
-    price: 349,
+    price: 35,
     image: smirnoffClasicoImg,
     category: "Vodkas",
     description: "Vodka clásico 750ml, triple destilación, filtrado 10 veces",
@@ -283,7 +283,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Absolut Vodka",
-    price: 549,
+    price: 40,
     image: absolutVodkaImg,
     category: "Vodkas",
     description: "Vodka sueco premium 700ml, destilación continua desde 1879",
@@ -291,7 +291,7 @@ export const products: Product[] = [
   {
     id: 19,
     name: "Skyy Vodka",
-    price: 399,
+    price: 40,
     image: skyyVodkaImg,
     category: "Vodkas",
     description: "Vodka americano 750ml, cuádruple destilación y triple filtración",
@@ -299,7 +299,7 @@ export const products: Product[] = [
   {
     id: 20,
     name: "Smirnoff Ice Green Apple",
-    price: 89,
+    price: 8,
     image: smirnoffIceGreenAppleImg,
     category: "Vodkas",
     description: "Bebida con vodka sabor manzana verde 355ml, refrescante y ligera",
@@ -307,7 +307,7 @@ export const products: Product[] = [
   {
     id: 21,
     name: "Smirnoff Green Apple",
-    price: 349,
+    price: 40,
     image: smirnoffAppleImg,
     category: "Vodkas",
     description: "Vodka saborizado manzana verde 700ml, infusión natural de sabores",
@@ -315,7 +315,7 @@ export const products: Product[] = [
   {
     id: 22,
     name: "Russkaya Vodka",
-    price: 249,
+    price: 25,
     image: russkayaVodkaImg,
     category: "Vodkas",
     description: "Vodka triple destilado 750ml, suave y cristalino",
@@ -323,7 +323,7 @@ export const products: Product[] = [
   {
     id: 23,
     name: "Russkaya Pink Strawberry",
-    price: 279,
+    price: 25,
     image: RUSSKAYAPING,
     category: "Vodkas",
     description: "Vodka saborizado fresa 750ml, sabor dulce y refrescante",
