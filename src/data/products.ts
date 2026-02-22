@@ -13,11 +13,12 @@ import queiroloRoseImg from "@/assets/queirolo-rose.jpg";
 import queiroloBorgonaImg from "@/assets/queirolo-borgona.webp";
 import taberneroBorgonaImg from "@/assets/tabernero-borgona.jpg";
 import taberneroRoseImg from "@/assets/tabernero-rose.webp";
-import tequilaImg from "@/assets/tequila.jpg";
+import JoseCuervoAzul from "@/assets/Tequila Jose Cuervo Azul.png";
+import JoseCuervoDorado from "@/assets/Tequila Jose cuervo dorado.png";
 import cusquenaTrigo6packImg from "@/assets/cusquena-trigo-6pack.webp";
 import cusquenaTrigoCaja12Img from "@/assets/cusquena-trigo-caja12.jpg";
 import pilsen6pack355Img from "@/assets/pilsen-6pack-355.jpg";
-import pilsen6pack473Img from "@/assets/pilsen-6pack-473.webp";
+import pilsen6pack473web from "@/assets/pilsen-6pack 473.webp"
 import pilsenCaja12Img from "@/assets/pilsen-caja12.jpg";
 import pilsen330Img from "@/assets/pilsen-330.jpg";
 import smirnoffClasicoImg from "@/assets/smirnoff-clasico.webp";
@@ -26,7 +27,12 @@ import skyyVodkaImg from "@/assets/skyy-vodka.webp";
 import smirnoffIceGreenAppleImg from "@/assets/smirnoff-ice-green-apple.webp";
 import smirnoffAppleImg from "@/assets/smirnoff-apple.webp";
 import russkayaVodkaImg from "@/assets/russkaya-vodka.webp";
-import russkayaPinkImg from "@/assets/russkaya-pink.webp";
+import RUSSKAYAPING from "@/assets/RUSSKAYAPING.png";
+// Agrega estas importaciones en la parte superior junto a las demás
+import cartavioBlackBarrelImg from "@/assets/RON CARTAVIO BLACK BARREL.png";
+import cartavioBlancoImg from "@/assets/Ron Cartavio BLANCO 720.png";
+import cartavioBlackImg from "@/assets/Ron Cartavio Black 720.png";
+import barceloAnejoImg from "@/assets/download (1).png"; // Te sugiero renombrar la imagen a barcelo-anejo.png en tu carpeta
 
 export interface Product {
   id: number;
@@ -118,20 +124,36 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Ron Diplomático Reserva",
-    price: 689,
-    image: rumImg,
+    name: "Ron Cartavio Black Barrel",
+    price: 45,
+    image: cartavioBlackBarrelImg,
     category: "Rones",
-    description: "Ron venezolano premium 750ml, notas de caramelo y vainilla",
+    description: "Ron peruano premium, añejado 3 años con notas intensas a madera y especias.",
   },
   {
     id: 4,
-    name: "Bacardí Añejo Cuatro",
-    price: 399,
-    image: rumImg,
+  name: "Ron Cartavio Blanco",
+    price: 25,
+    image: cartavioBlancoImg,
     category: "Rones",
-    description: "Ron dorado 750ml, 4 años de añejamiento en barrica",
+    description: "Ron original peruano, suave y versátil. Ideal para preparar mojitos y cócteles.",
   },
+  {
+    id: 32,
+    name: "Ron Cartavio Black",
+    price: 28, // Ajusta el precio según tu tienda 
+    image: cartavioBlackImg, category: "Rones",
+    description: "Ron oscuro peruano, con profundo sabor a caramelo y notas tostadas.",
+ },
+  {
+     id: 33,
+    name: "Ron Barceló Añejo",
+    price: 55, // Ajusta el precio según tu tienda
+    image: barceloAnejoImg,
+    category: "Rones",
+    description: "Ron dominicano añejado en barricas de roble, 37.5% vol. Sabor suave con toques de vainilla.",
+  },
+
   {
     id: 5,
     name: "Casillero del Diablo Reserva",
@@ -212,7 +234,7 @@ export const products: Product[] = [
     id: 25,
     name: "Pilsen Callao Six Pack 473ml",
     price: 36,
-    image: pilsen6pack473Img,
+    image: pilsen6pack473web,
     category: "Cervezas",
     description: "Six pack de latas grandes 473ml, la cerveza del Perú",
   },
@@ -236,19 +258,19 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Don Julio Reposado",
+    name: "Jose Cuervo Especial Silver",
     price: 799,
-    image: tequilaImg,
+    image: JoseCuervoAzul,
     category: "Tequilas",
-    description: "Tequila 100% agave 750ml, reposado en barricas de roble",
+    description: "Tequila blanco 750ml, sabor suave, fresco y con ligeras notas de agave.",
   },
   {
     id: 10,
-    name: "Patrón Silver",
+    name: "Jose Cuervo Especial Gold",
     price: 949,
-    image: tequilaImg,
+    image: JoseCuervoDorado,
     category: "Tequilas",
-    description: "Tequila ultra premium 750ml, cristalino y suave",
+    description: "Tequila dorado 750ml, reposado con notas dulces de vainilla y roble",
   },
   {
     id: 11,
@@ -302,7 +324,7 @@ export const products: Product[] = [
     id: 23,
     name: "Russkaya Pink Strawberry",
     price: 279,
-    image: russkayaPinkImg,
+    image: RUSSKAYAPING,
     category: "Vodkas",
     description: "Vodka saborizado fresa 750ml, sabor dulce y refrescante",
   },
@@ -326,8 +348,8 @@ export const combos = [
     name: "Combo Celebración",
     price: 999,
     originalPrice: 1299,
-    description: "1 Tequila Don Julio + 1 Vino Catena + 6 Cervezas",
-    image: tequilaImg,
+    description: "1 Tequila Jose Cuervo + 1 Vino Catena + 6 Cervezas",
+    image: JoseCuervoAzul,
     category: "Combos",
     isPromo: true,
   },
