@@ -28,7 +28,7 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
       transition={{ duration: 0.4 }}
       className="group bg-card border border-border rounded-sm overflow-hidden hover:border-gold transition-colors duration-300"
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
+      <div className="relative aspect-square sm:aspect-[3/4] overflow-hidden bg-secondary">
         <img
           src={product.image}
           alt={product.name}
@@ -36,32 +36,32 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
           loading="lazy"
         />
         {product.isPromo && (
-          <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider">
+          <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-accent text-accent-foreground text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-sm uppercase tracking-wider">
             Oferta
           </span>
         )}
       </div>
 
-      <div className="p-4">
-        <p className="text-xs text-primary tracking-[0.2em] uppercase mb-1">{product.category}</p>
-        <h3 className="font-serif text-lg font-semibold mb-1 text-foreground">{product.name}</h3>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{product.description}</p>
+      <div className="p-2.5 sm:p-4">
+        <p className="text-[10px] sm:text-xs text-primary tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-0.5 sm:mb-1">{product.category}</p>
+        <h3 className="font-serif text-sm sm:text-lg font-semibold mb-0.5 sm:mb-1 text-foreground leading-tight line-clamp-2">{product.name}</h3>
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 line-clamp-1 sm:line-clamp-2 hidden sm:block">{product.description}</p>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-baseline gap-2">
-            <span className="text-xl font-bold text-primary">${product.price}</span>
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+            <span className="text-base sm:text-xl font-bold text-primary">${product.price}</span>
             {product.originalPrice && (
-              <span className="text-sm text-muted-foreground line-through">
+              <span className="text-[10px] sm:text-sm text-muted-foreground line-through">
                 ${product.originalPrice}
               </span>
             )}
           </div>
           <button
             onClick={handleAdd}
-            className="bg-gradient-gold text-primary-foreground p-2.5 rounded-sm hover:opacity-90 transition-opacity"
+            className="bg-gradient-gold text-primary-foreground p-2 sm:p-2.5 rounded-sm hover:opacity-90 transition-opacity"
             aria-label={`Agregar ${product.name} al carrito`}
           >
-            <ShoppingCart className="w-4 h-4" />
+            <ShoppingCart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
         </div>
       </div>
@@ -96,12 +96,12 @@ const CatalogSection = () => {
         </motion.div>
 
         {/* Category filters */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex overflow-x-auto sm:flex-wrap sm:justify-center gap-2 mb-8 sm:mb-12 pb-2 sm:pb-0 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-sm text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
+              className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-sm text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
                 activeCategory === cat
                   ? "bg-gradient-gold text-primary-foreground shadow-gold"
                   : "border border-border text-muted-foreground hover:border-gold hover:text-primary"
@@ -113,7 +113,7 @@ const CatalogSection = () => {
         </div>
 
         {/* Product grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
