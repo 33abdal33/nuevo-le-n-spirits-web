@@ -72,7 +72,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Johnnie Walker Red Label",
-    price: 65,
+    price: 60,
     image: jwRedImg,
     category: "Whiskies",
     description: "Whisky escocés 750ml, ideal para cócteles",
@@ -80,7 +80,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: "Chivas Regal 12 Años",
-    price: 60,
+    price: 80,
     image: chivasImg,
     category: "Whiskies",
     description: "Blended Scotch Whisky 750ml, suave y refinado",
@@ -88,7 +88,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Ballantine's Finest",
-    price: 40,
+    price: 50,
     image: ballantinesImg,
     category: "Whiskies",
     description: "Blended Scotch Whisky 750ml, equilibrado y versátil",
@@ -112,7 +112,7 @@ export const products: Product[] = [
   {
     id: 17,
     name: "Old Times Black",
-    price: 28,
+    price: 30,
     image: oldTimesBlackImg,
     category: "Whiskies",
     description: "Blended Whisky 750ml, selección rara Nº2",
@@ -120,7 +120,7 @@ export const products: Product[] = [
   {
     id: 18,
     name: "Jack Daniel's Old ",
-    price: 130,
+    price: 110,
     image: jackDanielsImg,
     category: "Whiskies",
     description: "Tennessee Whiskey 750ml, filtrado en carbón de arce",
@@ -128,7 +128,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Ron Cartavio Black Barrel",
-    price: 35,
+    price: 30,
     image: cartavioBlackBarrelImg,
     category: "Rones",
     description: "Ron peruano premium, añejado 3 años con notas intensas a madera y especias.",
@@ -160,7 +160,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Casillero del Diablo Reserva",
-    price: 35,
+    price: 40,
     image: casilleroImg,
     category: "Vinos",
     description: "Vino tinto Cabernet Sauvignon 750ml, Concha y Toro, Chile",
@@ -176,7 +176,7 @@ export const products: Product[] = [
   {
     id: 28,
     name: "Santiago Queirolo Rosé",
-    price: 25,
+    price: 20,
     image: queiroloRoseImg,
     category: "Vinos",
     description: "Vino Rosé Shiraz 750ml, 11.5% vol, tradición peruana",
@@ -184,7 +184,7 @@ export const products: Product[] = [
   {
     id: 29,
     name: "Santiago Queirolo Borgoña",
-    price: 25,
+    price: 20,
     image: queiroloBorgonaImg,
     category: "Vinos",
     description: "Vino Borgoña Gran Vino 750ml, clásico peruano",
@@ -192,7 +192,7 @@ export const products: Product[] = [
   {
     id: 30,
     name: "Tabernero Borgoña",
-    price: 25,
+    price: 20,
     image: taberneroBorgonaImg,
     category: "Vinos",
     description: "Vino Borgoña semi seco 750ml, 11% vol, Ica, Perú",
@@ -200,7 +200,7 @@ export const products: Product[] = [
   {
     id: 31,
     name: "Tabernero Gran Rosé",
-    price: 25,
+    price: 20,
     image: taberneroRoseImg,
     category: "Vinos",
     description: "Vino Gran Rosé semi seco afrutado 750ml, Ica, Perú",
@@ -208,7 +208,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Cusqueña Trigo Six Pack Lata 473ml",
-    price: 30,
+    price: 36,
     originalPrice: 40,
     image: cusquenaTrigo6packImg,
     category: "Cervezas",
@@ -244,8 +244,8 @@ export const products: Product[] = [
   {
     id: 26,
     name: "Pilsen Callao Caja x12",
-    price: 70,
-    originalPrice: 77,
+    price: 84,
+    originalPrice: 90,
     image: pilsenCaja12Img,
     category: "Cervezas",
     description: "Caja de 12 botellas 620ml, ideal para reuniones",
@@ -262,7 +262,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Jose Cuervo Especial Silver",
-    price: 40,
+    price: 80,
     image: JoseCuervoAzul,
     category: "Tequilas",
     description: "Tequila blanco 750ml, sabor suave, fresco y con ligeras notas de agave.",
@@ -270,7 +270,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Jose Cuervo Especial Gold",
-    price: 40,
+    price: 80,
     image: JoseCuervoDorado,
     category: "Tequilas",
     description: "Tequila dorado 750ml, reposado con notas dulces de vainilla y roble",
@@ -286,7 +286,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Absolut Vodka",
-    price: 40,
+    price: 60,
     image: absolutVodkaImg,
     category: "Vodkas",
     description: "Vodka sueco premium 700ml, destilación continua desde 1879",
@@ -294,7 +294,7 @@ export const products: Product[] = [
   {
     id: 19,
     name: "Skyy Vodka",
-    price: 40,
+    price: 50,
     image: skyyVodkaImg,
     category: "Vodkas",
     description: "Vodka americano 750ml, cuádruple destilación y triple filtración",
