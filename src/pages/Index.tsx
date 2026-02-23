@@ -8,6 +8,8 @@ import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import LoadingScreen from "@/components/LoadingScreen";
+import { Analytics } from '@vercel/analytics/react';
+
 
 const Index = () => {
   return (
