@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { X, Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
+import CheckoutForm from "./CheckoutForm";
 
 const CartDrawer = () => {
   const { items, removeItem, updateQuantity, clearCart, totalPrice, isCartOpen, setIsCartOpen } =
     useCart();
+  const [showCheckout, setShowCheckout] = useState(false);
 
   return (
     <AnimatePresence>
@@ -15,7 +18,7 @@ const CartDrawer = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsCartOpen(false)}
+            onClick={() => { setIsCartOpen(false); setShowCheckout(false); }}
             className="fixed inset-0 bg-background/60 backdrop-blur-sm z-50"
           />
 
@@ -42,6 +45,10 @@ const CartDrawer = () => {
               </button>
             </div>
 
+            {showCheckout ? (
+              <CheckoutForm onBack={() => setShowCheckout(false)} />
+            ) : (
+            <>
             {/* Items */}
             <div className="flex-1 overflow-y-auto p-5">
               {items.length === 0 ? (
@@ -115,22 +122,13 @@ const CartDrawer = () => {
               <div className="border-t border-border p-5 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="text-xl font-bold text-primary">${totalPrice.toLocaleString()}</span>
+                  <span className="text-xl font-bold text-primary">S/{totalPrice.toFixed(2)}</span>
                 </div>
                 <button
                   className="w-full bg-gradient-gold text-primary-foreground py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold"
-                  onClick={() => {
-                    const whatsappNumber = "51944088559";
-                    const orderText = items
-                      .map((i) => `• ${i.name} x${i.quantity} - $${i.price * i.quantity}`)
-                      .join("\n");
-                    const message = encodeURIComponent(
-                      `¡Hola! Quiero hacer un pedido:\n\n${orderText}\n\nTotal: $${totalPrice.toLocaleString()}`
-                    );
-                    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
-                  }}
+                  onClick={() => setShowCheckout(true)}
                 >
-                  Finalizar Pedido por WhatsApp
+                  Finalizar Pedido
                 </button>
                 <button
                   onClick={clearCart}
@@ -139,6 +137,8 @@ const CartDrawer = () => {
                   Vaciar carrito
                 </button>
               </div>
+            )}
+            </>
             )}
           </motion.div>
         </>
