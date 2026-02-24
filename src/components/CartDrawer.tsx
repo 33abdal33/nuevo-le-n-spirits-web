@@ -73,7 +73,7 @@ const CartDrawer = () => {
                           {item.name}
                         </h4>
                         <p className="text-xs text-muted-foreground">{item.category}</p>
-                        <p className="text-sm font-bold text-primary mt-1">${item.price}</p>
+                        <p className="text-sm font-bold text-primary mt-1">S/{item.price}</p>
 
                         <div className="flex items-center justify-between mt-2">
                           <div className="flex items-center gap-2">
