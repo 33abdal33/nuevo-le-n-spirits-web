@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Search, X } from "lucide-react";
 import { products, categories, type Category } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
@@ -71,9 +71,21 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
 
 const CatalogSection = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("Todos");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filtered =
-    activeCategory === "Todos" ? products : products.filter((p) => p.category === activeCategory);
+  const filtered = useMemo(() => {
+    let result = activeCategory === "Todos" ? products : products.filter((p) => p.category === activeCategory);
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim();
+      result = result.filter(
+        (p) =>
+          p.name.toLowerCase().includes(query) ||
+          p.category.toLowerCase().includes(query) ||
+          p.description?.toLowerCase().includes(query)
+      );
+    }
+    return result;
+  }, [activeCategory, searchQuery]);
 
   return (
     <section id="catalogo" className="py-20 bg-gradient-dark">
@@ -95,6 +107,27 @@ const CatalogSection = () => {
           </p>
         </motion.div>
 
+        {/* Search bar */}
+        <div className="relative max-w-md mx-auto mb-6 sm:mb-8">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Buscar producto..."
+            className="w-full pl-10 pr-10 py-2.5 rounded-sm bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Limpiar búsqueda"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+
         {/* Category filters */}
         <div className="flex overflow-x-auto sm:flex-wrap sm:justify-center gap-2 mb-8 sm:mb-12 pb-2 sm:pb-0 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map((cat) => (
@@ -113,11 +146,18 @@ const CatalogSection = () => {
         </div>
 
         {/* Product grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <p className="text-muted-foreground text-lg">No se encontraron productos</p>
+            <p className="text-muted-foreground/60 text-sm mt-1">Intenta con otro término de búsqueda</p>
+          </div>
+        )}
       </div>
     </section>
   );
