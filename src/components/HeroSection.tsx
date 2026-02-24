@@ -7,7 +7,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -21,9 +21,9 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 container mx-auto px-5 py-16 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl mx-auto"
@@ -32,12 +32,12 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-primary tracking-[0.4em] uppercase text-sm font-medium mb-6"
+            className="text-primary tracking-[0.3em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm font-medium mb-4 sm:mb-6"
           >
             Licorería Premium
           </motion.p>
 
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="text-gradient-gold">Nuevo León</span>
           </h1>
 
@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-foreground/70 font-light mb-10 font-serif italic"
+            className="text-base sm:text-xl md:text-2xl text-foreground/70 font-light mb-8 sm:mb-10 font-serif italic px-4"
           >
             "El sabor de los buenos momentos"
           </motion.p>
@@ -54,29 +54,29 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
           >
             <button
               onClick={scrollToCatalog}
-              className="bg-gradient-gold text-primary-foreground px-10 py-4 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold"
+              className="bg-gradient-gold text-primary-foreground px-8 sm:px-10 py-3.5 sm:py-4 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold active:scale-95 transition-transform"
             >
               Comprar Ahora
             </button>
             <a
               href="#nosotros"
-              className="border border-gold px-10 py-4 rounded-sm font-semibold tracking-wider uppercase text-sm text-primary hover:bg-primary/10 transition-colors"
+              className="border border-gold px-8 sm:px-10 py-3.5 sm:py-4 rounded-sm font-semibold tracking-wider uppercase text-sm text-primary hover:bg-primary/10 transition-colors active:scale-95 transition-transform"
             >
               Conócenos
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - hidden on small mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

@@ -88,22 +88,22 @@ const CatalogSection = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="catalogo" className="py-20 bg-gradient-dark">
+    <section id="catalogo" className="py-12 sm:py-20 bg-gradient-dark">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-6 sm:mb-12"
         >
-          <p className="text-primary tracking-[0.4em] uppercase text-sm font-medium mb-3">
+          <p className="text-primary tracking-[0.3em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm font-medium mb-2 sm:mb-3">
             Nuestra Selección
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-gradient-gold mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-gold mb-3 sm:mb-4">
             Catálogo Premium
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Descubre nuestra exclusiva colección de licores seleccionados para los paladares más exigentes
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm sm:text-base px-2">
+            Descubre nuestra exclusiva colección de licores seleccionados
           </p>
         </motion.div>
 
