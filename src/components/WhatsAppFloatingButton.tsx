@@ -1,10 +1,15 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { useCart } from "@/context/CartContext";
 
 const WHATSAPP_NUMBER = "51944088559";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hola, no encuentro un producto en su catálogo. ¿Podrían ayudarme?");
 
 const WhatsAppFloatingButton = () => {
+  const { isCartOpen } = useCart();
+
+  if (isCartOpen) return null;
+
   return (
     <motion.a
       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}

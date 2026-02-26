@@ -125,7 +125,7 @@ const CartDrawer = () => {
                   <span className="text-xl font-bold text-primary">S/{totalPrice.toFixed(2)}</span>
                 </div>
                 <button
-                  className="w-full bg-gradient-gold text-primary-foreground py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold"
+                  className="w-full bg-gradient-gold text-primary-foreground py-3.5 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold active:scale-95"
                   onClick={() => setShowCheckout(true)}
                 >
                   Finalizar Pedido
