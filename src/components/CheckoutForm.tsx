@@ -168,10 +168,10 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
       </div>
 
       {/* Submit */}
-      <div className="border-t border-border p-5">
+      <div className="border-t border-border p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">
         <button
           type="submit"
-          className="w-full bg-gradient-gold text-primary-foreground py-3 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold"
+          className="w-full bg-gradient-gold text-primary-foreground py-3.5 rounded-sm font-semibold tracking-wider uppercase text-sm hover:opacity-90 transition-opacity shadow-gold active:scale-95"
         >
           Enviar Pedido por WhatsApp
         </button>
