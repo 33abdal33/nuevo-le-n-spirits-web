@@ -148,7 +148,7 @@ const CatalogSection = () => {
         {/* Product grid */}
         {filtered.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
-            {filtered.map((product) => (
+            {filtered.map((product, i) => (
               <ProductCard key={product.id} product={product} index={i} />
             ))}
           </div>
