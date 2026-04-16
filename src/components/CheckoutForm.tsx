@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { MapPin, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useCart } from "@/context/CartContext";
 
@@ -13,40 +12,10 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
   const { items, totalPrice, clearCart, setIsCartOpen } = useCart();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [loadingLocation, setLoadingLocation] = useState(false);
-
-  const getLocation = () => {
-    if (!navigator.geolocation) {
-      toast.error("Tu navegador no soporta geolocalización");
-      return;
-    }
-    setLoadingLocation(true);
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-        try {
-          const res = await fetch(
-            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`
-          );
-          const data = await res.json();
-          setAddress(data.display_name || `${latitude}, ${longitude}`);
-        } catch {
-          setAddress(`${latitude}, ${longitude}`);
-        }
-        setLoadingLocation(false);
-      },
-      () => {
-        toast.error("No se pudo obtener tu ubicación. Permite el acceso.");
-        setLoadingLocation(false);
-      },
-      { enableHighAccuracy: true, timeout: 10000 }
-    );
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim() || !address.trim()) {
+    if (!name.trim() || !phone.trim()) {
       toast.error("Por favor completa todos los campos");
       return;
     }
@@ -63,10 +32,8 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
       `¡Hola! Quiero hacer un pedido:\n\n` +
         `${orderLines}\n\n` +
         `*Total: S/${totalPrice.toFixed(2)}*\n\n` +
-        `📋 *Datos de entrega:*\n` +
         `👤 Nombre: ${name.trim()}\n` +
-        `📱 Celular: ${phone.trim()}\n` +
-        `📍 Dirección: ${address.trim()}`
+        `📱 Celular: ${phone.trim()}`
     );
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
@@ -86,9 +53,8 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
           ← Volver al carrito
         </button>
 
-        <h3 className="font-serif text-lg font-bold text-foreground">Datos de entrega</h3>
+        <h3 className="font-serif text-lg font-bold text-foreground">Datos de contacto</h3>
 
-        {/* Name */}
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-foreground">Nombre completo</label>
           <input
@@ -101,7 +67,6 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
           />
         </div>
 
-        {/* Phone */}
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-foreground">Número de celular</label>
           <input
@@ -112,43 +77,6 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
             maxLength={15}
             className="w-full px-3 py-2.5 rounded-sm bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
           />
-        </div>
-
-        {/* Address */}
-        <div className="space-y-1.5">
-          <label className="text-sm font-medium text-foreground">Dirección de entrega</label>
-          <div className="relative">
-            <textarea
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              placeholder="Av. Ejemplo 123, Distrito"
-              maxLength={300}
-              rows={2}
-              className="w-full px-3 py-2.5 pr-12 rounded-sm bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
-            />
-            <button
-              type="button"
-              onClick={getLocation}
-              disabled={loadingLocation}
-              className="absolute right-2 top-2 p-1.5 rounded-sm text-primary hover:bg-primary/10 transition-colors disabled:opacity-50"
-              title="Usar mi ubicación"
-            >
-              {loadingLocation ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
-              ) : (
-                <MapPin className="w-4 h-4" />
-              )}
-            </button>
-          </div>
-          <button
-            type="button"
-            onClick={getLocation}
-            disabled={loadingLocation}
-            className="flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors"
-          >
-            <MapPin className="w-3 h-3" />
-            {loadingLocation ? "Obteniendo ubicación..." : "Usar mi ubicación actual"}
-          </button>
         </div>
 
         {/* Order summary */}
@@ -167,7 +95,6 @@ const CheckoutForm = ({ onBack }: CheckoutFormProps) => {
         </div>
       </div>
 
-      {/* Submit */}
       <div className="border-t border-border p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">
         <button
           type="submit"
