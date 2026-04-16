@@ -5,7 +5,7 @@ import { products, categories, type Category } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
 
-const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
+const ProductCard = ({ product, index }: { product: (typeof products)[0]; index: number }) => {
   const { addItem } = useCart();
 
   const handleAdd = () => {
@@ -21,11 +21,11 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-40px" }}
       whileHover={{ y: -5 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.1, ease: "easeOut" }}
       className="group bg-card border border-border rounded-sm overflow-hidden hover:border-gold transition-colors duration-300"
     >
       <div className="relative aspect-square sm:aspect-[3/4] overflow-hidden bg-secondary">
